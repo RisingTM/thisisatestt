@@ -1,0 +1,123 @@
+body{
+    background-color: lightgray;
+}
+
+.home{
+    /* background-image: url(../img/header-bg.jpg); */
+    height: 100vh;
+    background-color: rgba(0, 0, 255, 0.464);
+    /* background-position: center center;
+    background-size: cover; */
+}
+.layer{
+    background-color: rgba(0, 0, 0, 0.779);
+    height: 100vh;
+}
+.home .layer .navbar .navbar-nav .nav-item .nav-link{
+    color:white ;
+    position: relative;
+
+}
+.home .layer .navbar .navbar-nav .nav-item .nav-link.active{
+    color:chocolate ;
+    
+}
+.home .layer .navbar .navbar-nav .nav-item .nav-link:hover{
+    color:chocolate ;
+    
+}
+.home .layer .navbar .navbar-nav .nav-item {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    position: relative;
+    padding-left: 0 !important;
+}
+/* .home .layer .navbar .navbar-nav .nav-item:hover{
+    transform:rotate(360deg) !important;
+    -webkit-transform:rotate(360deg) !important;
+    -moz-transform:rotate(360deg) !important;
+    -ms-transform:rotate(360deg) !important;
+    -o-transform:rotate(360deg) !important;
+} */
+.home-content{
+    display: flex;
+}
+
+.bhead2{
+    animation: move 2s infinite;
+}
+
+
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+    }
+
+    25%{
+        transform: translateY(5px);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+
+    75%{
+        transform: translateY(5px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+
+}
+
+
+
+.service-title ::after{
+    content: '';
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.king ::after{
+    content: '';
+    width: 40px;
+    height: 5px;
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: all .5s;
+}
+
+.icon:hover .king::after{
+    width: 60px;
+}
+
+.tbored{
+
+    border: 2px;
+    box-shadow: 2px;
+}
+
+.home .layer .navbar .navbar-nav .nav-item::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    background-color: white;
+    transition: all .5s;
+}
+
+.nav-item:hover.nav-item::after{
+    width: 50px !important;
+}
